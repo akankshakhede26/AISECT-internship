@@ -2,9 +2,10 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Greeting from "./components/Greeting";
 import ProfileCard from "./components/ProfileCard";
+import CounterApp from "./components/CounterApp";
+import UserForm from "./components/UserForm";
 
 function App() {
-  // Bonus Challenge: Array of user profiles rendered with .map()
   const profiles = [
     {
       id: 1,
@@ -28,18 +29,31 @@ function App() {
 
   return (
     <div style={{ fontFamily: "Arial, sans-serif", minHeight: "100vh", display: "flex", flexDirection: "column" }}>
-      {/* Task 1: Header */}
       <Header />
 
       <main style={{ padding: "20px", flex: 1, textAlign: "center" }}>
         <h2>Welcome to My React App!</h2>
-        <p>This is my first modular React layout.</p>
+        <p>Exploring React Components, Props, and State Management.</p>
 
         <hr style={{ margin: "25px auto", maxWidth: "600px", borderColor: "#eee" }} />
 
-        {/* Task 2: Pass Data as Props (Greeting) */}
+        {/* Week 3 - Day 3: Task 1 (Counter App with useState) */}
         <section>
-          <h2>Task 2: Dynamic Greetings with Props</h2>
+          <CounterApp />
+        </section>
+
+        <hr style={{ margin: "25px auto", maxWidth: "600px", borderColor: "#eee" }} />
+
+        {/* Week 3 - Day 3: Task 2 (Dynamic Form with Live Preview) */}
+        <section>
+          <UserForm />
+        </section>
+
+        <hr style={{ margin: "25px auto", maxWidth: "600px", borderColor: "#eee" }} />
+
+        {/* Task 2: Props & Dynamic Data */}
+        <section>
+          <h2>Dynamic Greetings (Props)</h2>
           <div style={{ display: "flex", justifyContent: "center", gap: "30px", flexWrap: "wrap" }}>
             <Greeting name="Priya" topic="React Components" />
             <Greeting name="Rohan" topic="JSX & Props" />
@@ -48,9 +62,9 @@ function App() {
 
         <hr style={{ margin: "25px auto", maxWidth: "600px", borderColor: "#eee" }} />
 
-        {/* Task 3 & Bonus Challenge: Profile Cards using .map() */}
+        {/* Task 3 & Bonus: Profile Cards via .map() */}
         <section>
-          <h2>Task 3 & Bonus: Team Profiles (.map())</h2>
+          <h2>Team Profiles (.map())</h2>
           <div style={{ display: "flex", justifyContent: "center", flexWrap: "wrap", gap: "10px" }}>
             {profiles.map((user) => (
               <ProfileCard
@@ -64,7 +78,6 @@ function App() {
         </section>
       </main>
 
-      {/* Task 1: Footer */}
       <Footer />
     </div>
   );

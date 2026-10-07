@@ -2,7 +2,7 @@ function Greeting(props) {
   return (
     <div style={{ margin: "10px 0" }}>
       <h3>Hello, {props.name}!</h3>
-      <p>You are learning {props.topic} today.</p>
+      <p>I am learning {props.topic} today.</p>
     </div>
   );
 }
