@@ -6,6 +6,7 @@ import CounterApp from "./components/CounterApp";
 import UserForm from "./components/UserForm";
 import UserList from "./components/UserList";
 import Posts from "./components/Posts";
+import LoginForm from "./components/LoginForm";
 
 function App() {
   const profiles = [
@@ -35,7 +36,14 @@ function App() {
 
       <main style={{ padding: "20px", flex: 1, textAlign: "center" }}>
         <h2>Welcome to My React App!</h2>
-        <p>Exploring React Components, Props, State Management, and API Data Fetching with useEffect.</p>
+        <p>Exploring React Components, Props, State Management, API Data Fetching, and Conditional Rendering.</p>
+
+        <hr style={{ margin: "25px auto", maxWidth: "600px", borderColor: "#eee" }} />
+
+        {/* Week 3 - Day 5: Tasks 1 & 2 (Conditional Login Form & Welcome Message) */}
+        <section>
+          <LoginForm />
+        </section>
 
         <hr style={{ margin: "25px auto", maxWidth: "600px", borderColor: "#eee" }} />
 
